@@ -5,7 +5,6 @@
      labels:
        app: scaletestapp
    spec:
-     replicas: 1
      selector:
        matchLabels:
          app: scaletestapp
@@ -18,9 +17,9 @@
           - name: scaletestapp
             image: shestera/scaletestapp:latest
             ports:
-            - containerPort: 80
+            - containerPort: 8080
             resources:
               requests:
-                memory: "30Mi"
+                memory: "32Mi"
               limits:
-                memory: "30Mi" 
+                memory: "64Mi"
